@@ -1,0 +1,27 @@
+"use client"; import {useEffect,useState} from 'react';
+const TABS=[['photos','🖼️ Photos'],['categories','🗂️ Catégories'],['packs','💰 Packs & Tarifs'],['testimonials','⭐ Témoignages'],['settings','⚙️ Réglages']];
+export default function Admin(){
+ const [tab,setTab]=useState('photos'); const [d,setD]=useState(null); const [form,setForm]=useState({}); const [msg,setMsg]=useState('');
+ async function load(){const r=await fetch('/api/data'); if(r.ok) setD(await r.json());}
+ useEffect(()=>{fetch('/api/photos').then(()=>{}); fetch('/api/settings').then(r=>{if(r.status===401) location.href='/admin/login'}); load()},[]);
+ if(!d) return <p className="sans" style={{padding:40}}>Chargement… Si rien ne s'affiche, <a href="/admin/login">connectez-vous</a>.</p>;
+ const items=d[tab]||[];
+ async function save(e){e.preventDefault(); const isSettings=tab==='settings'; const url='/api/'+tab; const method=form.id||isSettings?'PUT':'POST'; const body=isSettings?d.settings:{...form, price:form.price?Number(form.price):undefined, rating:form.rating?Number(form.rating):undefined, features:typeof form.features==='string'?form.features.split('\n').filter(Boolean):form.features};
+  const r=await fetch(url,{method,headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}); if(r.status===401){location.href='/admin/login';return} setMsg(r.ok?'✅ Enregistré':'❌ Erreur'); setForm({}); load();}
+ async function del(id){if(!confirm('Supprimer définitivement ?'))return; await fetch('/api/'+tab,{method:'DELETE',headers:{'Content-Type':'application/json'},body:JSON.stringify({id})}); load();}
+ async function upload(e){const f=e.target.files[0]; if(!f)return; const fd=new FormData(); fd.append('file',f); const r=await fetch('/api/upload',{method:'POST',body:fd}); const j=await r.json(); if(j.url) setForm({...form,image_url:j.url});}
+ const F=(k,label,type='text')=> <><label>{label}</label>{type==='textarea'?<textarea value={form[k]||''} onChange={e=>setForm({...form,[k]:e.target.value})}/>:<input type={type} value={form[k]||''} onChange={e=>setForm({...form,[k]:e.target.value})}/>}</>;
+ return <main className="container"><div className="admin"><aside><h3>MAYO <span className="gold">ADMIN</span></h3>{TABS.map(([k,l])=><button key={k} className={tab===k?'on':''} onClick={()=>{setTab(k);setForm({})}}>{l}</button>)}<button onClick={async()=>{await fetch('/api/auth/logout',{method:'POST'});location.href='/'}}>🚪 Déconnexion</button><button onClick={()=>location.href='/'}>🌐 Voir le site</button><p className="sans" style={{fontSize:12,color:'#988f76',padding:10}}>Base : {d.db==='neon'?'🟢 Neon':'🟠 Locale — ajoutez DATABASE_URL pour Neon'}</p></aside>
+ <div>{msg&&<p className="sans">{msg}</p>}
+ {tab==='settings'? <form className="card" onSubmit={save}><h3>Réglages du site</h3>{Object.keys(d.settings).map(k=><div key={k}><label>{k}</label><input value={d.settings[k]||''} onChange={e=>setD({...d,settings:{...d.settings,[k]:e.target.value}})}/></div>)}<button className="btn">Enregistrer les réglages</button></form>
+ : <>
+ <form className="card" onSubmit={save}><h3>{form.id?'Modifier':'Ajouter'} — {tab}</h3>
+  {tab==='photos'&&<>{F('title','Titre')}<label>Catégorie (slug)</label><select value={form.category_slug||''} onChange={e=>setForm({...form,category_slug:e.target.value})}><option value="">— Choisir —</option>{d.categories.map(c=><option key={c.id} value={c.slug}>{c.name}</option>)}</select>{F('image_url',"URL de l'image")}<label>…ou téléverser un fichier</label><input type="file" accept="image/*" onChange={upload}/>{form.image_url&&<img src={form.image_url} style={{width:120,height:90,objectFit:'cover',borderRadius:8}}/>}{F('description','Description','textarea')}<label><input type="checkbox" style={{width:'auto'}} checked={!!form.featured} onChange={e=>setForm({...form,featured:e.target.checked})}/> À la une (hero)</label></>}
+  {tab==='categories'&&<>{F('name','Nom')}{F('slug','Slug (ex: mariage)')}{F('icon','Icône / emoji')}{F('description','Description','textarea')}</>}
+  {tab==='packs'&&<>{F('name','Nom du pack')}{F('category','Catégorie')}{F('price','Prix (nombre)','number')}{F('currency','Devise')}{F('duration','Durée')}{F('description','Description','textarea')}<label>Inclus (une ligne par élément)</label><textarea value={Array.isArray(form.features)?form.features.join('\n'):(form.features||'')} onChange={e=>setForm({...form,features:e.target.value})}/><label><input type="checkbox" style={{width:'auto'}} checked={!!form.popular} onChange={e=>setForm({...form,popular:e.target.checked})}/> Pack populaire</label></>}
+  {tab==='testimonials'&&<>{F('name','Nom')}{F('role','Rôle / événement')}{F('message','Message','textarea')}{F('rating','Note (1-5)','number')}</>}
+  <div style={{display:'flex',gap:10}}><button className="btn">{form.id?'Mettre à jour':'Ajouter'}</button>{form.id&&<button type="button" className="btn ghost" onClick={()=>setForm({})}>Annuler</button>}</div></form>
+ <div style={{marginTop:24}}>{items.map(it=><div className="row" key={it.id}>{it.image_url&&<img src={it.image_url}/>}<span style={{flex:1}}><b>{it.title||it.name}</b><br/><small style={{color:'#988f76'}}>{it.category_slug||it.category||it.role||it.slug||''} {it.price?`• ${Number(it.price).toLocaleString('fr-FR')} ${it.currency}`:''}</small></span><button className="btn small ghost" onClick={()=>setForm({...it})}>Modifier</button><button className="btn small danger" onClick={()=>del(it.id)}>Supprimer</button></div>)}</div>
+ </>}
+ </div></div></main>;
+}

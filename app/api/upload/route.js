@@ -1,0 +1,2 @@
+import fs from 'fs'; import path from 'path'; import {requireAdmin} from '@/lib/auth';
+export async function POST(req){const e=await requireAdmin(); if(e) return e; const form=await req.formData(); const file=form.get('file'); if(!file) return Response.json({error:'Aucun fichier'},{status:400}); const name=Date.now()+'-'+file.name.replace(/[^a-zA-Z0-9.-]/g,'_'); const dir=path.join(process.cwd(),'public','uploads'); fs.mkdirSync(dir,{recursive:true}); fs.writeFileSync(path.join(dir,name),Buffer.from(await file.arrayBuffer())); return Response.json({url:'/uploads/'+name})}

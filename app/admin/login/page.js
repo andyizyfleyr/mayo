@@ -1,0 +1,4 @@
+"use client"; import {useState} from 'react';
+export default function Login(){const [p,setP]=useState('');const [e,setE]=useState('');
+ async function go(ev){ev.preventDefault(); const r=await fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:p})}); if(r.ok) location.href='/admin'; else setE('Mot de passe incorrect (par défaut : mayo-admin)');}
+ return <main className="container" style={{maxWidth:420,paddingTop:80}}><div className="card"><h2>Espace Admin</h2><p className="sans" style={{color:'#a99f87'}}>Mayo Studio — connexion</p><form onSubmit={go}><label>Mot de passe</label><input type="password" value={p} onChange={e=>setP(e.target.value)}/>{e&&<p className="sans" style={{color:'#f88'}}>{e}</p>}<button className="btn" style={{width:'100%'}}>Se connecter</button></form><p className="sans" style={{fontSize:13,marginTop:14}}><a href="/">← Retour au site</a></p></div></main>}

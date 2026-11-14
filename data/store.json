@@ -1,0 +1,506 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Portrait",
+      "slug": "portrait",
+      "description": "Portraits studio & lifestyle qui révèlent votre personnalité",
+      "icon": "◉",
+      "sort_order": 1
+    },
+    {
+      "id": 2,
+      "name": "Événement",
+      "slug": "evenement",
+      "description": "Anniversaires, soirées, cérémonies : l'émotion sur le vif",
+      "icon": "✦",
+      "sort_order": 2
+    },
+    {
+      "id": 3,
+      "name": "Corporate",
+      "slug": "corporate",
+      "description": "Conférences, meetups, image de marque entreprise",
+      "icon": "◆",
+      "sort_order": 3
+    },
+    {
+      "id": 4,
+      "name": "Mariage",
+      "slug": "mariage",
+      "description": "Le plus beau jour, raconté en images intemporelles",
+      "icon": "♥",
+      "sort_order": 4
+    },
+    {
+      "id": 5,
+      "name": "Famille",
+      "slug": "famille",
+      "description": "Grossesse, famille, enfants : vos souvenirs précieux",
+      "icon": "⬢",
+      "sort_order": 5
+    },
+    {
+      "id": 6,
+      "name": "Mode & Produit",
+      "slug": "mode-produit",
+      "description": "Mode, marques & produits qui se vendent en image",
+      "icon": "⬣",
+      "sort_order": 6
+    }
+  ],
+  "photos": [
+    {
+      "id": 6,
+      "title": "Anniversaire 18 ans — 1",
+      "image_url": "/images/evenement/anniv-01.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": true,
+      "sort_order": 0
+    },
+    {
+      "id": 7,
+      "title": "Anniversaire 18 ans — 2",
+      "image_url": "/images/evenement/anniv-02.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 8,
+      "title": "Anniversaire 18 ans — 3",
+      "image_url": "/images/evenement/anniv-03.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 9,
+      "title": "Anniversaire 18 ans — 4",
+      "image_url": "/images/evenement/anniv-04.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 10,
+      "title": "Anniversaire 18 ans — 5",
+      "image_url": "/images/evenement/anniv-05.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 11,
+      "title": "Anniversaire 18 ans — 6",
+      "image_url": "/images/evenement/anniv-06.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 12,
+      "title": "Anniversaire 18 ans — 7",
+      "image_url": "/images/evenement/anniv-07.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 13,
+      "title": "Anniversaire 18 ans — 8",
+      "image_url": "/images/evenement/anniv-08.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 14,
+      "title": "Anniversaire 18 ans — 9",
+      "image_url": "/images/evenement/anniv-09.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 15,
+      "title": "Anniversaire 18 ans — 10",
+      "image_url": "/images/evenement/anniv-10.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 16,
+      "title": "Meet'Up RH — 1",
+      "image_url": "/images/corporate/corp-01.jpg",
+      "category_slug": "corporate",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 17,
+      "title": "Meet'Up RH — 2",
+      "image_url": "/images/corporate/corp-02.jpg",
+      "category_slug": "corporate",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 18,
+      "title": "Meet'Up RH — 3",
+      "image_url": "/images/corporate/corp-03.jpg",
+      "category_slug": "corporate",
+      "description": "",
+      "featured": true,
+      "sort_order": 0
+    },
+    {
+      "id": 19,
+      "title": "Meet'Up RH — 4",
+      "image_url": "/images/corporate/corp-04.jpg",
+      "category_slug": "corporate",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 20,
+      "title": "Meet'Up RH — 5",
+      "image_url": "/images/corporate/corp-05.jpg",
+      "category_slug": "corporate",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 21,
+      "title": "Meet'Up RH — 6",
+      "image_url": "/images/corporate/corp-06.jpg",
+      "category_slug": "corporate",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 22,
+      "title": "Meet'Up RH — 7",
+      "image_url": "/images/corporate/corp-07.jpg",
+      "category_slug": "corporate",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 23,
+      "title": "Meet'Up RH — 8",
+      "image_url": "/images/corporate/corp-08.jpg",
+      "category_slug": "corporate",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 24,
+      "title": "Meet'Up RH — 9",
+      "image_url": "/images/corporate/corp-09.jpg",
+      "category_slug": "corporate",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 25,
+      "title": "Meet'Up RH — 10",
+      "image_url": "/images/corporate/corp-10.jpg",
+      "category_slug": "corporate",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 26,
+      "title": "Soirée & cinéma — 1",
+      "image_url": "/images/soiree/soiree-01.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 27,
+      "title": "Soirée & cinéma — 2",
+      "image_url": "/images/soiree/soiree-02.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 28,
+      "title": "Soirée & cinéma — 3",
+      "image_url": "/images/soiree/soiree-03.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 29,
+      "title": "Soirée & cinéma — 4",
+      "image_url": "/images/soiree/soiree-04.jpg",
+      "category_slug": "evenement",
+      "description": "",
+      "featured": false,
+      "sort_order": 0
+    },
+    {
+      "id": 30,
+      "title": "Marius A. — Fondateur & photographe",
+      "image_url": "/images/portrait/boss.jpg",
+      "category_slug": "portrait",
+      "description": "CHOGNIKA G. Marius A., responsable de Mayo Studio",
+      "featured": false,
+      "sort_order": 0
+    }
+  ],
+  "packs": [
+    {
+      "id": 1,
+      "name": "Photo d'identité / Passeport",
+      "category": "Photo Express",
+      "price": 0,
+      "currency": "FCFA",
+      "duration": "Express",
+      "description": "Vos photos officielles prêtes en quelques minutes",
+      "features": [
+        "4 photos d'identité",
+        "Format passeport / officiel",
+        "Fond aux normes",
+        "Remise rapide"
+      ],
+      "popular": false,
+      "sort_order": 1
+    },
+    {
+      "id": 2,
+      "name": "Photo CV / LinkedIn Pro",
+      "category": "Photo Express",
+      "price": 0,
+      "currency": "FCFA",
+      "duration": "Express",
+      "description": "Une image professionnelle qui inspire confiance",
+      "features": [
+        "Fond blanc ou noir au choix",
+        "Retouche professionnelle",
+        "Format CV & LinkedIn",
+        "Remise rapide"
+      ],
+      "popular": false,
+      "sort_order": 2
+    },
+    {
+      "id": 3,
+      "name": "Shooting Solo",
+      "category": "Studio Portrait",
+      "price": 0,
+      "currency": "FCFA",
+      "duration": "30 min",
+      "description": "Votre séance portrait individuelle en studio",
+      "features": [
+        "30 minutes de shooting",
+        "5 photos retouchées",
+        "Conseils poses & tenue",
+        "Livraison galerie en ligne"
+      ],
+      "popular": false,
+      "sort_order": 3
+    },
+    {
+      "id": 4,
+      "name": "Shooting Duo / Couple",
+      "category": "Studio Portrait",
+      "price": 0,
+      "currency": "FCFA",
+      "duration": "45 min",
+      "description": "À deux, en couple ou entre proches",
+      "features": [
+        "45 minutes de shooting",
+        "10 photos retouchées",
+        "Poses guidées à deux",
+        "Livraison galerie en ligne"
+      ],
+      "popular": false,
+      "sort_order": 4
+    },
+    {
+      "id": 5,
+      "name": "Pack Anniversaire / Maternité",
+      "category": "Studio Portrait",
+      "price": 0,
+      "currency": "FCFA",
+      "duration": "1 heure",
+      "description": "Le pack fête & futurs parents, photo + vidéo",
+      "features": [
+        "1 heure de séance",
+        "20 photos retouchées",
+        "1 vidéo Réel 4K offerte",
+        "Décor & ambiance personnalisés"
+      ],
+      "popular": false,
+      "sort_order": 5
+    },
+    {
+      "id": 6,
+      "name": "Pack Essentiel",
+      "category": "Mariage",
+      "price": 0,
+      "currency": "FCFA",
+      "duration": "Jour du mariage",
+      "description": "L'essentiel de votre grand jour, en images",
+      "features": [
+        "100 photos retouchées",
+        "Clé USB incluse",
+        "Reportage du jour J",
+        "Galerie en ligne"
+      ],
+      "popular": false,
+      "sort_order": 6
+    },
+    {
+      "id": 7,
+      "name": "Pack Premium",
+      "category": "Mariage",
+      "price": 0,
+      "currency": "FCFA",
+      "duration": "Jour du mariage",
+      "description": "Photo + vidéo 4K + drone pour un souvenir complet",
+      "features": [
+        "200 photos retouchées",
+        "1 vidéo 4K",
+        "Teaser de 1 minute",
+        "Plans de drone inclus",
+        "Clé USB incluse"
+      ],
+      "popular": false,
+      "sort_order": 7
+    },
+    {
+      "id": 8,
+      "name": "Mayo Signature",
+      "category": "Mariage",
+      "price": 0,
+      "currency": "FCFA",
+      "duration": "Jour du mariage",
+      "description": "Notre formule mariage la plus prestigieuse",
+      "features": [
+        "300 photos retouchées",
+        "Film de 15 min en 4K",
+        "Album photo luxe",
+        "Plans de drone inclus",
+        "Clé USB incluse"
+      ],
+      "popular": false,
+      "sort_order": 8
+    },
+    {
+      "id": 9,
+      "name": "Vidéo Pub 30s",
+      "category": "Vidéo 4K Entreprise",
+      "price": 0,
+      "currency": "FCFA",
+      "duration": "Tournage + montage",
+      "description": "Pour boutiques, restaurants et commerces",
+      "features": [
+        "Vidéo publicitaire de 30 secondes",
+        "Tournage sur place",
+        "Montage professionnel",
+        "Prête pour réseaux sociaux"
+      ],
+      "popular": false,
+      "sort_order": 9
+    },
+    {
+      "id": 10,
+      "name": "Couverture Événement Entreprise",
+      "category": "Vidéo 4K Entreprise",
+      "price": 0,
+      "currency": "FCFA",
+      "duration": "Demi-journée",
+      "description": "Conférences, meetups, lancements, soirées pro",
+      "features": [
+        "Couverture demi-journée",
+        "Vidéo 4K",
+        "Montage inclus",
+        "Images des temps forts"
+      ],
+      "popular": false,
+      "sort_order": 10
+    },
+    {
+      "id": 11,
+      "name": "Clip Musical Artiste",
+      "category": "Vidéo 4K Entreprise",
+      "price": 0,
+      "currency": "FCFA",
+      "duration": "Clip complet",
+      "description": "Votre clip en qualité cinéma",
+      "features": [
+        "Tournage en 4K",
+        "Étalonnage professionnel",
+        "Montage rythmé",
+        "Rendu prêt à diffuser"
+      ],
+      "popular": false,
+      "sort_order": 11
+    },
+    {
+      "id": 12,
+      "name": "Pack Influenceuse / Commerçante",
+      "category": "Vidéo 4K Entreprise",
+      "price": 0,
+      "currency": "FCFA",
+      "duration": "Par mois",
+      "description": "Du contenu TikTok régulier pour vendre plus",
+      "features": [
+        "10 vidéos TikTok par mois",
+        "Tournage + montage",
+        "Formats pensés pour vendre",
+        "Suivi mensuel"
+      ],
+      "popular": false,
+      "sort_order": 12
+    }
+  ],
+  "testimonials": [],
+  "settings": {
+    "site_name": "Mayo Studio",
+    "tagline": "Figer le vrai, filmer l'avenir",
+    "hero_title": "Figer le vrai, filmer l'avenir",
+    "hero_text": "Figer le vrai, filmer l'avenir — photo express, portrait studio, mariage et vidéo 4K. Mayo Studio raconte votre histoire en images, partout au Bénin.",
+    "whatsapp": "2290145565653",
+    "phone": "+229 01 45 56 56 53",
+    "email": "",
+    "address": "Cotonou, Bénin",
+    "instagram": "",
+    "facebook": "",
+    "about_title": "L'histoire de Mayo Studio",
+    "about_text": "Fondé en 2026 et fort de 3 ans d'expérience derrière l'objectif, Mayo Studio est né d'une conviction : chaque histoire mérite d'être racontée en images, avec fiabilité. Sous la direction de CHOGNIKA G. Marius A., le studio s'est spécialisé dans la photo express, le portrait studio, le mariage et la vidéo 4K pour entreprises et créateurs. Notre différence ? Par notre fiabilité, nous racontons mieux votre histoire — nous tenons nos délais, nous tenons nos promesses, et nous figeons le vrai, pour filmer votre avenir.",
+    "responsable": "CHOGNIKA G. Marius A.",
+    "hours": "Sur réservation",
+    "tiktok": "",
+    "maps_url": "https://share.google/95tXLiOI9sPQcp1QH"
+  }
+}
